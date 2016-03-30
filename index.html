@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musically Inclined Music Lessons</title>
+    <link async href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="/images/musically_inclined_logo.png" alt="Musically Inclined Music Lessons Logo" /></div>
+        <nav>
+            <ul>
+                <li>Tuition Payment</li>
+                <li>Recitals</li>
+                <li>About</li>
+                <li>Enroll</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="overlay"></div>
+        <div class="image"></div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="mailto:kenfrieson.miml@gmail.com?subject=Music Lessons"><img src="/images/email.png" alt="Email Me"></a>
+            <a href="https://www.linkedin.com/in/kenneth-frieson-0144333a"><img src="/images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/Musically-Inclined-Music-Lessons-852384021550625/"><img src="/images/facebook.png" alt="Facebook"></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        console.log("Scripts");
+        var slideshow = 0;
+        var index = 0;
+        var bg = document.querySelector('.image');
+        bg.style.transition.length = 500;
+        bg.style.backgroundSize         = "cover";
+        bg.style.backgroundPosition     = "center";
+        function next () {
+            if (index === loaded.length) index = 0;
+            bg.style.background             = "url(" + loaded[index++] + ")";
+            bg.style.transition.length = 500;
+            bg.style.backgroundSize         = "cover";
+            bg.style.backgroundPosition     = "center";
+        }
+        var loaded = [];
+        function completed(src){
+            loaded.push(src);
+            if(!slideshow){
+                slideshow = setInterval(next, 2750);
+                window.scrollTo(0,1); //Hide the address bar
+            }
+        }
+    </script>
+    <img class="bg" onload="completed(this.src)" src="/images/IMG_4338.JPG">
+    <img class="bg" onload="completed(this.src)" src="/images/IMG_4344.JPG">
+    <img class="bg" onload="completed(this.src)" src="/images/IMG_4407.JPG">
+    <img class="bg" onload="completed(this.src)" src="/images/IMG_4410.JPG">
+    <img class="bg" onload="completed(this.src)" src="/images/IMG_4421.JPG">
+
+</body>
+</html>
