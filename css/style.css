@@ -26,6 +26,10 @@ header {
 nav {
     float: right;
 }
+nav a {
+    color: white;
+    text-decoration: none;
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -44,33 +48,23 @@ nav ul li:first-child {
         font-size: 16px;
     }
     header {
-        padding: 0;
+        padding: 5px 15px;
         border-bottom: 5px solid #980007;
     }
     .logo {
-        width: 100%;
-        float: none;
         margin: 0;
-        text-align: center;
     }
     .logo img {
         height: 50px;
     }
-    nav {
-        float: none;
-        text-align: center;
-    }
-    nav ul li {
-        padding: 0 5px;
-    }
 }
-main {
+main.photos {
     width: 100vw;
     height: calc(100vh - 110px);
 }
 @media only screen and (max-width:700px) {
-    main {
-        height: calc(100vh - 120px);
+    main.photos {
+        height: calc(100vh - 69px);
     }
 }
 main .overlay{
@@ -95,14 +89,19 @@ main .image {
     background: url('/images/IMG_4338.JPG');
     -webkit-transition: 1s;
     transition: 1s;
-    /*position: relative;*/
 }
+
 footer {
     background-color: rgba(0,0,0, .4);
     position: fixed;
     right: 50px;
     bottom: 0;
     padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+footer * {
+    border-radius: 5px;
 }
 
 .bg {
@@ -115,7 +114,7 @@ footer {
     margin: 0 auto;
     box-shadow: 0 0 6px #980007, 0 0 25px rgba(0, 0, 0, 0.5);
     color: black;
-    padding: 5px 25px;
+    padding: 5px 25px 75px 25px;
 }
 .page h1 {
     color: #980007;
@@ -123,8 +122,12 @@ footer {
 .page img {
     float: left;
     margin: 25px 20px 15px 0;
-    /*height: 200px;*/
-
+    width: 300px;
+}
+@media only screen and (max-width:700px) {
+    .page img {
+        width: 150px;
+    }
 }
 .cta-btn {
     width: 280px;
@@ -138,6 +141,5 @@ footer {
     margin: 0 auto;
     padding: 10px 10px;
     display: block;
-    /*position: relative;*/
     text-align: center;
 }
