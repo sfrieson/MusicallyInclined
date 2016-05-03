@@ -4,15 +4,15 @@ var index = 0;
 var bg = document.querySelector('.image');
 bg.style.transition.length = 500;
 bg.style.backgroundSize         = "cover";
-bg.style.backgroundPosition     = "center";
+bg.style.backgroundPosition     = "50% 30%";
 
 var bgPos = {
   //image_name.JPG       : " x=  y="
   "/images/IMG_4344.JPG" : "50% 30%",
   "/images/IMG_4407.JPG" : "40% 40%",
   "/images/IMG_4410.JPG" : "40% 40%",
-  "/images/IMG_4421.JPG" : "40% 30%",
-  "/images/IMG_4338.JPG" : "50% 40%",
+  "/images/IMG_4421.JPG" : "40% 20%",
+  "/images/IMG_4338.JPG" : "50% 30%",
   "/images/IMG_4581.JPG" : "50% 20%"
 }
 
