@@ -32,35 +32,13 @@
         </div>
     </footer>
 
-    <script type="text/javascript">
-        console.log("Scripts");
-        var slideshow = 0;
-        var index = 0;
-        var bg = document.querySelector('.image');
-        bg.style.transition.length = 500;
-        bg.style.backgroundSize         = "cover";
-        bg.style.backgroundPosition     = "center";
-        function next () {
-            if (index === loaded.length) index = 0;
-            bg.style.background             = "url(" + loaded[index++] + ")";
-            bg.style.transition.length = 500;
-            bg.style.backgroundSize         = "cover";
-            bg.style.backgroundPosition     = "center";
-        }
-        var loaded = [];
-        function completed(src){
-            loaded.push(src);
-            if(!slideshow){
-                slideshow = setInterval(next, 2750);
-                window.scrollTo(0,1); //Hide the address bar
-            }
-        }
-    </script>
+    <script src="/js/scripts.js" charset="utf-8"></script>
     <img class="bg" onload="completed(this.src)" src="/images/IMG_4344.JPG">
     <img class="bg" onload="completed(this.src)" src="/images/IMG_4407.JPG">
     <img class="bg" onload="completed(this.src)" src="/images/IMG_4410.JPG">
     <img class="bg" onload="completed(this.src)" src="/images/IMG_4421.JPG">
     <img class="bg" onload="completed(this.src)" src="/images/IMG_4338.JPG">
+    <img class="bg" onload="completed(this.src)" src="/images/IMG_4581.JPG">
 
 </body>
 </html>

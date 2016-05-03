@@ -1,30 +1,33 @@
-function sum (a,b) {
-    console.log(a+b); //the work
-    return undefined; //or just empty
+console.log("Scripts");
+var slideshow = 0;
+var index = 0;
+var bg = document.querySelector('.image');
+bg.style.transition.length = 500;
+bg.style.backgroundSize         = "cover";
+bg.style.backgroundPosition     = "center";
+
+var bgPos = {
+  //image_name.JPG       : " x=  y="
+  "/images/IMG_4344.JPG" : "50% 30%",
+  "/images/IMG_4407.JPG" : "40% 40%",
+  "/images/IMG_4410.JPG" : "40% 40%",
+  "/images/IMG_4421.JPG" : "40% 30%",
+  "/images/IMG_4338.JPG" : "50% 40%",
+  "/images/IMG_4581.JPG" : "50% 20%"
 }
-total = sum(5,7);
-console.log(total);
 
-
-//example of when you don't want to return
-//depends on this specific environment;
-
-age = 25;
-
-function birthday () {
-    age = age + 1;
-    //notice no return
+function next () {
+    if (++index === loaded.length) index = 0;
+    bg.style.background         = "url(" + loaded[index] + ")";
+    bg.style.transition.length  = 500;
+    bg.style.backgroundSize     = "cover";
+    bg.style.backgroundPosition = bgPos[loaded[index].match(/\/images\/IMG_[0-9]{4}.jpg/i)[0]];
 }
-
-birthday ();//notice I'm not assigning the response to a variable
-age; //26
-
-
-function preincrement(num){ //++num
-    return num + 1;
-}
-function postincrement(num){ //num++
-    var old = num;
-    num = num +1;
-    return old;
+var loaded = [];
+function completed(src){
+    loaded.push(src);
+    if(!slideshow){
+        slideshow = setInterval(next, 2750);
+        window.scrollTo(0,1); //Hide the address bar
+    }
 }
