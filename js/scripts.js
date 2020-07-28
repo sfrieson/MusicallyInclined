@@ -20,6 +20,7 @@ function next () {
     if (++index === loaded.length) index = 0;
     bg.style.background         = "url(" + loaded[index] + ")";
     bg.style.transition.length  = 500;
+    bg.style.transition.transitionProperty = 
     bg.style.backgroundSize     = "cover";
     bg.style.backgroundPosition = bgPos[loaded[index].match(/\/images\/IMG_[0-9]{4}.jpg/i)[0]];
 }
